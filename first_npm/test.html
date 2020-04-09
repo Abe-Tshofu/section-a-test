@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+    <title>The Full stack Challenge</title>
+    </head>
+
+    <body>
+        <h1>The Full stack Challenge</h1>
+        <h3>Section A</h3>
+        <p>Question 1 Solution:</p>
+        <h4>On Chrome Dev tool: Console</h4>
+        <script>
+            numbers = [200, 4, 150, 1, 5, 9, 50, 99, 450]
+            numbers.sort(function(a,b){return a - b})
+            console.log('ASCENDING: ' + numbers)
+        </script>
+        <br>
+        <p>Question 2 Solution:</p>
+        <h4>On Chrome Dev tool: Console</h4>
+        <script>            
+            function divisors(x){
+                arr = [];
+                for (var i = 2; i < x; i++){
+                    if (x % i === 0){
+                        arr.push(i);
+                        }
+                    }
+                        if (arr.leangth === 0){
+                            return (x + ' is Prime');
+                            }
+                                
+                             if (arr == []) {
+                            console.log(x + ' is a Prime number');
+                    }      /* else {
+                        console.log(x + ' is not a Prime number');
+                        } */
+                
+                    return arr;                             
+            }
+            console.log(divisors(29));
+            console.log(divisors(8));
+            console.log(divisors(100));
+        </script>
+        <br>
+        <p>Question 3 Solution:</p>
+        <h4>On Chrome Dev tool: Console</h4>
+        <script>
+           /* function isPalindrome(x){
+            x = x.toString().split('');          // (1)
+
+                 var len = x.length;             // (2) for(var i=0; i<len/2;i++){ // (3)
+                    if(x[i] !== x[len-1-i]){     // (4)
+                    return false;
+                    }
+                    return true;
+            } */
+
+
+                function isPalindrome(x){
+                    x = x.toString().split('');
+
+                 var len = x.length; 
+                 
+                        for(var i=0; i<len/2;i++) {
+                        if(x[i] !== x[len-1-i]){
+                            return false;
+                         }
+                     }
+                      return true;
+                    }
+                  function largestPalindrome(){
+                    var largest = 0;
+
+                        for(var i=999; i>=100; i--){
+                         for(var j=999; j>=100; j--){
+                            var mult = i*j; 
+
+                        //breaking out of the second loop
+                        if (mult < largest) break;
+                        
+                        if(isPalindrome(mult) && mult > largest){
+                        largest = mult;
+                        }
+                    }
+                    
+                } 
+                    return largest;
+                }
+                 console.log(isPalindrome(1234));
+                 console.log(isPalindrome(44));
+                 console.log(isPalindrome(3 * 3));
+                 console.log(isPalindrome(91 * 99 * 2));
+
+        </script>
+    </body>
+
+</html>
