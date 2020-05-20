@@ -45,29 +45,21 @@
         <p>Question 3 Solution:</p>
         <h4>On Chrome Dev tool: Console</h4>
         <script>
-           /* function isPalindrome(x){
-            x = x.toString().split('');          // (1)
-
-                 var len = x.length;             // (2) for(var i=0; i<len/2;i++){ // (3)
-                    if(x[i] !== x[len-1-i]){     // (4)
-                    return false;
-                    }
-                    return true;
-            } */
-
-
-                function isPalindrome(x){
+          // This function checks if a number is palindrome
+            function isPalindrome(x){
                     x = x.toString().split('');
 
                  var len = x.length; 
                  
-                        for(var i=0; i<len/2;i++) {
+                        for(var i=0; i<len/2;i++) 
+                        {
                         if(x[i] !== x[len-1-i]){
                             return false;
                          }
                      }
                       return true;
                     }
+            
                   function largestPalindrome(){
                     var largest = 0;
 
